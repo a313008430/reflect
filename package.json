@@ -1,0 +1,23 @@
+{
+	"name": "demo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"b": "gulp build",
+		"w": "gulp watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-uglify": "^3.0.2",
+		"rollup": "^2.16.1",
+		"rollup-plugin-typescript2": "^0.27.1",
+		"typescript": "^3.9.5"
+	},
+	"dependencies": {
+		"reflect-metadata": "^0.1.13"
+	}
+}
