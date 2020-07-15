@@ -21,6 +21,12 @@ Object.assign(Reflect, {
 		console.log(metadataValue.prototype);
 		console.log(metadataKey, metadataValue, metadataValue.name);
 		// console.log(typeof metadataValue);
+		// console.log(Reflect.get());
+
+		function decorator(target, propertyKey) {
+			console.log(target, propertyKey);
+		}
+		return decorator;
 	},
 });
 

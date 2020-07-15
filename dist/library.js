@@ -49,6 +49,11 @@
             console.log(metadataValue.prototype);
             console.log(metadataKey, metadataValue, metadataValue.name);
             // console.log(typeof metadataValue);
+            // console.log(Reflect.get());
+            function decorator(target, propertyKey) {
+                console.log(target, propertyKey);
+            }
+            return decorator;
         },
     });
 
@@ -61,18 +66,12 @@
 
     var Main = /** @class */ (function () {
         function Main() {
-            this.getTest = 2;
+            // @logType //必须要有一个装饰器，才能启动元数据
+            // getTest: number = 2;
+            // @logType
+            // ttt!: myLo;
             this.mmm = new Logic();
         }
-        __decorate([
-            logType //必须要有一个装饰器，才能启动元数据
-            ,
-            __metadata("design:type", Number)
-        ], Main.prototype, "getTest", void 0);
-        __decorate([
-            logType,
-            __metadata("design:type", Object)
-        ], Main.prototype, "ttt", void 0);
         __decorate([
             logType,
             __metadata("design:type", Logic)
@@ -86,7 +85,7 @@
     }
     // console.log(Main.prototype);
     // console.log(Reflect["getMetadata"]("design:type", Main.prototype, "getTest"));
-    // console.log(Reflect);
+    console.log(Reflect);
     // console.log(Reflect.getMetadata("design:type", Main.prototype, "getTest"));
 
     exports.Main = Main;
